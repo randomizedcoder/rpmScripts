@@ -1,0 +1,11 @@
+[Unit]
+Description=ethtool_enp1s0f0_tweak
+Before=network-pre.target
+
+[Service]
+ExecStart=ethtool --set-ring enp1s0f0 rx 8192 tx 8192
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=network.target
