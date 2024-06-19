@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-namespace=VLAN6
+namespace=VLAN4
 device=enp1s0f1
-vlan=6
-ip='172.16.6.10/24'
+vlan=4
+ip='10.4.4.10/24'
 bandwidth=1000Mbit
 rtt=1ms
 
@@ -23,7 +23,7 @@ echo_and_run () {
 cmd="./configure_namespace_vlan.bash ${namespace} ${device} ${vlan} ${ip} ${bandwidth} ${rtt}"
 echo_and_run "${cmd}"
 
-cmd="ip netns exec ${namespace} ip route add 172.16.5.0/24 via 172.16.6.1"
+cmd="ip netns exec ${namespace} ip route add default via 10.4.4.1"
 echo_and_run "${cmd}"
 
 #######
