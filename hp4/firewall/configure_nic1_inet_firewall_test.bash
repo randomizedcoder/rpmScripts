@@ -20,7 +20,7 @@ echo_and_run () {
 # bandwidth=$5
 # rtt=$6
 
-cmd="../configure_namespace_vlan.bash ${namespace} ${device} ${vlan} ${ip} ${bandwidth} ${rtt}"
+cmd="./configure_namespace_vlan.bash ${namespace} ${device} ${vlan} ${ip} ${bandwidth} ${rtt}"
 echo_and_run "${cmd}"
 
 cmd="ip netns exec ${namespace} ip route add default via 172.16.50.1"

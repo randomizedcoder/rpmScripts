@@ -6,8 +6,8 @@ echo_and_run () {
     eval "${cmd}"
 }
 
-namespace=INSIDE
-ip="76.174.138.10"
+namespace=VLAN4
+ip="10.3.3.10"
 p=$1
 i=$2
 

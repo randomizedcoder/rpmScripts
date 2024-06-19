@@ -1,0 +1,1 @@
+../../configure_namespace_vlan.bash
